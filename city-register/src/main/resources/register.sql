@@ -61,15 +61,16 @@ CREATE TABLE cr_adress_person (
     person_id integer not null,
     start_date date not null,
     end_date date,
+    temporal boolean DEFAULT false,
     PRIMARY KEY (person_adress_id),
     FOREIGN KEY (adress_id) REFERENCES cr_adress(adress_id) ON DELETE RESTRICT,
     FOREIGN KEY (person_id) REFERENCES cr_person(person_id) ON DELETE RESTRICT
 );
 
-INSERT INTO cr_adress_person (adress_id, person_id, start_date, end_date)
-VALUES (1, 1, '2014-10-12', null);
-INSERT INTO cr_adress_person (adress_id, person_id, start_date, end_date)
-VALUES (1, 2, '2014-10-12', null);
+INSERT INTO cr_adress_person (adress_id, person_id, start_date, end_date, temporal)
+VALUES (1, 1, '2014-10-12', null, false);
+INSERT INTO cr_adress_person (adress_id, person_id, start_date, end_date, temporal)
+VALUES (1, 2, '2014-10-12', null, false);
 INSERT INTO cr_adress_person (adress_id, person_id, start_date, end_date)
 VALUES (1, 3, '2016-02-05', null);
 INSERT INTO cr_adress_person (adress_id, person_id, start_date, end_date)
