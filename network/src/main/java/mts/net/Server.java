@@ -41,15 +41,16 @@ class SimpleServer extends Thread {
             // поток вывода
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 
-            // создаём билдер
-            StringBuilder sb = new StringBuilder("Hello, ");
             //получаем строку текста из строки байт
-            String userName = br.readLine();
-            System.out.println("Server got a string: " + userName);
-            Thread.sleep(2000);
-            sb.append(userName);
-            // пишем в райтер
-            bw.write(sb.toString());
+            String request = br.readLine();
+            String[] lines = request.split("\\s+");
+            String command = lines[0];
+            String userName = lines[1];
+            System.out.println("Server got a string 1 : " + command);
+            System.out.println("Server got a string 2 : " + userName);
+
+            String response = buildResponse(command, userName);
+            bw.write(response);
             bw.newLine();
             bw.flush();
 
@@ -62,5 +63,16 @@ class SimpleServer extends Thread {
             e.printStackTrace(System.out);
         }
 
+    }
+
+    private  String buildResponse(String command, String userName) {
+
+        switch (command) {
+            case "HELLO" : return  "Hello, " + userName;
+            case "MORNING" : return  "Morning, " + userName;
+            case "DAY" : return  "Day, " + userName;
+            case "EVENING" : return  "Evening, " + userName;
+            default: return "HI, BEACH!";
+        }
     }
 }
