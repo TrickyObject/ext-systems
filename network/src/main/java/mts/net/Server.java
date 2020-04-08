@@ -6,40 +6,61 @@ import java.net.Socket;
 
 public class Server {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
-        ServerSocket socket = new ServerSocket(24410);
+        ServerSocket socket = new ServerSocket(24410, 2000);
         System.out.println("Server started.. ");
 
         while (true) {
 
             Socket client = socket.accept();
-            handleRequest(client);
+            new SimpleServer(client).start();
         }
     }
 
-    private static void handleRequest(Socket client) throws IOException {
 
-        // Потом ввода
-        BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
-        // поток вывода
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+}
 
-        // создаём билдер
-        StringBuilder sb = new StringBuilder("Hello, ");
-        //получаем строку текста из строки байт
-        String userName = br.readLine();
-        System.out.println("Server got a string: " + userName);
-        sb.append(userName);
-        // пишем в райтер
-        bw.write(sb.toString());
-        bw.newLine();
-        bw.flush();
+class SimpleServer extends Thread {
 
-        br.close();
-        bw.close();
+    private Socket client;
 
-        client.close();
+    public SimpleServer(Socket client) {
+        this.client = client;
+    }
+
+    public void run() {
+        handleRequest();
+    }
+
+    private void handleRequest() {
+
+        try {
+            // Потом ввода
+            BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            // поток вывода
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+
+            // создаём билдер
+            StringBuilder sb = new StringBuilder("Hello, ");
+            //получаем строку текста из строки байт
+            String userName = br.readLine();
+            System.out.println("Server got a string: " + userName);
+            Thread.sleep(2000);
+            sb.append(userName);
+            // пишем в райтер
+            bw.write(sb.toString());
+            bw.newLine();
+            bw.flush();
+
+            br.close();
+            bw.close();
+
+            client.close();
+
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
 
     }
 }
