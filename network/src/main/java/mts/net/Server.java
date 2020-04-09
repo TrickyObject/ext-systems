@@ -3,19 +3,52 @@ package mts.net;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
 public class Server {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
         ServerSocket socket = new ServerSocket(24410, 2000);
+
+        Map<String, Greetable> handlers = loadHandlers();
+
         System.out.println("Server started.. ");
 
         while (true) {
 
             Socket client = socket.accept();
-            new SimpleServer(client).start();
+            new SimpleServer(client, handlers).start();
         }
+    }
+
+    private static Map<String, Greetable> loadHandlers() {
+
+        Map<String, Greetable> result = new HashMap<>();
+
+        // расширение указывать не обязательно - написать буквально название
+        try (InputStream is = Server.class.getClassLoader()
+                .getResourceAsStream("ServerProperties")) {
+
+            Properties properties = new Properties();
+            properties.load(is);
+
+            for (Object command : properties.keySet()) {
+                String className = properties.getProperty(command.toString());
+                Class<Greetable> cl = (Class<Greetable>) Class.forName(className);
+                Greetable handler = cl.getConstructor().newInstance();
+                result.put(command.toString(), handler);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+        return result;
     }
 
 
@@ -24,9 +57,11 @@ public class Server {
 class SimpleServer extends Thread {
 
     private Socket client;
+    private Map<String, Greetable> hanlers;
 
-    public SimpleServer(Socket client) {
+    public SimpleServer(Socket client, Map<String, Greetable> handlers) {
         this.client = client;
+        this.hanlers = handlers;
     }
 
     public void run() {
@@ -67,12 +102,12 @@ class SimpleServer extends Thread {
 
     private  String buildResponse(String command, String userName) {
 
-        switch (command) {
-            case "HELLO" : return  "Hello, " + userName;
-            case "MORNING" : return  "Morning, " + userName;
-            case "DAY" : return  "Day, " + userName;
-            case "EVENING" : return  "Evening, " + userName;
-            default: return "HI, BEACH!";
+        Greetable handler = hanlers.get(command);
+        if (handler != null) {
+            return handler.buildResponse(userName);
         }
+        return "Hi, " + userName;
     }
+
+
 }
