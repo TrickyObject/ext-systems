@@ -31,22 +31,22 @@ public class PersonCheckDaoTest {
 
     }
 
-    @Test
-    public void checkPerson2() throws PersonCheckException {
-        PersonRequest pr = new PersonRequest();
-        pr.setSurName("Васильева");
-        pr.setGivenName("Ирина");
-        pr.setPatronymicName("Петровна");
-        pr.setDateOfBirth(LocalDate.of(1997, 8, 21));
-        pr.setStreetCode(1);
-        pr.setBuilding("271");
-        pr.setExtention("null");
-        pr.setApartment("null");
-
-        PersonCheckDao dao = new PersonCheckDao();
-        PersonResponse ps = dao.checkPerson(pr);
-        Assert.assertTrue(ps.isRegistered());
-        Assert.assertFalse(ps.isTemporal());
-
-    }
+//    @Test
+//    public void checkPerson2() throws PersonCheckException {
+//        PersonRequest pr = new PersonRequest();
+//        pr.setSurName("Васильева");
+//        pr.setGivenName("Ирина");
+//        pr.setPatronymicName("Петровна");
+//        pr.setDateOfBirth(LocalDate.of(1997, 8, 21));
+//        pr.setStreetCode(1);
+//        pr.setBuilding("271");
+//        pr.setExtention("null");
+//        pr.setApartment("null");
+//
+//        PersonCheckDao dao = new PersonCheckDao();
+//        PersonResponse ps = dao.checkPerson(pr);
+//        Assert.assertTrue(ps.isRegistered());
+//        Assert.assertFalse(ps.isTemporal());
+//
+//    }
 }

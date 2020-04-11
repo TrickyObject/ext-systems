@@ -14,22 +14,23 @@ public class SimpleSocket {
     public void simpleSocket() throws IOException {
 
         // посмотреть технологии джава
-        Socket socket = new Socket("java-course.ru", 80);
+        //ресурс, куда обращаемся
+        Socket socket = new Socket("localhost", 8080);
 
         InputStream inputStream = socket.getInputStream();
         OutputStream outputStream = socket.getOutputStream();
 //        гет-запрос
-//        String command = "GET /sitemap.xml HTTP/1.1\r\nHost:java-course.ru\r\n\r\n";
+        String command = "GET /test HTTP/1.1\r\nHost:Test\r\n\r\n";
 //        получили поток байт
-//        outputStream.write(command.getBytes());
+        outputStream.write(command.getBytes());
 //        неотложная отправка
-//        outputStream.flush();
+        outputStream.flush();
 
         // чтение потока
-//        int c = 0;
-//        while ((c = inputStream.read()) != -1) {
-//            System.out.println((char) c);
-//        }
+        int c = 0;
+        while ((c = inputStream.read()) != -1) {
+            System.out.print((char) c);
+        }
 
         // закрываем ресурс
         socket.close();
