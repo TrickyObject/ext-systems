@@ -1,10 +1,12 @@
 package mts.city.web;
 
-
 import mts.city.dao.PersonCheckDao;
+import mts.city.dao.PoolConnectionBuilder;
 import mts.city.domain.PersonRequest;
 import mts.city.domain.PersonResponse;
 import mts.city.exception.PersonCheckException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +18,17 @@ import java.time.LocalDate;
 
 @WebServlet(name = "CheckPersonServlet", urlPatterns = {"/checkPerson"})
 public class CheckPersonServlet extends HttpServlet {
+
+    private static final Logger logger = LoggerFactory.getLogger(CheckPersonServlet.class);
+    private PersonCheckDao dao;
+
+    // разовая инициализация объекта для повторного использования !!!
+    @Override
+    public void init() throws ServletException {
+        logger.info("SERVLET IS CREATED..");
+        dao = new PersonCheckDao();
+        dao.setConnectionBuilder(new PoolConnectionBuilder());
+    }
 
     // 2 варианта передать инфо о классе в Tomcat:
     // web.xml (старый) и аннотация

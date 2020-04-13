@@ -1,12 +1,17 @@
 package mts.city.dao;
 
+import com.sun.org.apache.bcel.internal.generic.GOTO;
 import mts.city.domain.PersonRequest;
 import mts.city.domain.PersonResponse;
 import mts.city.exception.PersonCheckException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 
 public class PersonCheckDao {
+
+    private static final Logger logger = LoggerFactory.getLogger(PersonCheckDao.class);
 
     private static final String SQL_REQUEST = "select temporal from cr_adress_person ap " +
             "inner join cr_person p on p.person_id = ap.person_id " +
@@ -20,12 +25,22 @@ public class PersonCheckDao {
             "and a.street_code = ? " +
             "and a.building = ? ";
 
-    public PersonCheckDao() {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+    private ConnectionBuilder connectionBuilder;
+
+    public void setConnectionBuilder(ConnectionBuilder connectionBuilder) {
+        logger.info("Задали билдер ");
+        this.connectionBuilder = connectionBuilder;
+        if (this.connectionBuilder == null) {
+            logger.info("БИЛДЕР ПУСТОЙ");
+        } else {
+            logger.info("БИЛДЕР НЕ ПУСТОЙ");
         }
+    }
+
+    private Connection getConnection() throws SQLException {
+        logger.info("Попытка получить коннекшн ");
+//      TODO : Тут оно и валится
+        return connectionBuilder.getConnection();
     }
 
     public PersonResponse checkPerson (PersonRequest request) throws PersonCheckException {
@@ -76,12 +91,6 @@ public class PersonCheckDao {
         }
 
         return response;
-    }
-
-    private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:postgresql://localhost/city_register",
-                "postgres",
-                "root");
     }
 }
 
