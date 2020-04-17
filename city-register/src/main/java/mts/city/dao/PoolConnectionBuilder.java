@@ -16,25 +16,18 @@ public class PoolConnectionBuilder implements ConnectionBuilder {
     private DataSource dataSource;
 
     public PoolConnectionBuilder() {
-
         try {
             Context ctx =  new InitialContext();
             dataSource = (DataSource) ctx.lookup("java:comp/env/jdbc/cityRegister");
             logger.info("Дата соурс загружен ");
         } catch (NamingException e) {
-            logger.error("ОШИБКА ", e);
+            logger.error("ОШИБКА. Дата соурс не загружен", e);
         }
     }
 
-    @Override
     public Connection getConnection() throws SQLException {
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
         logger.info("Попытка гет ");
-        return dataSource.getConnection();
+        return this.dataSource.getConnection();
 
     }
 }

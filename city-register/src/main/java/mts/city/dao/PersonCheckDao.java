@@ -1,6 +1,5 @@
 package mts.city.dao;
 
-import com.sun.org.apache.bcel.internal.generic.GOTO;
 import mts.city.domain.PersonRequest;
 import mts.city.domain.PersonResponse;
 import mts.city.exception.PersonCheckException;
