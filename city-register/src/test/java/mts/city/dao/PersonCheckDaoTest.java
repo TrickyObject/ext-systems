@@ -8,8 +8,6 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.Assert.*;
-
 public class PersonCheckDaoTest {
 
     @Test
@@ -21,7 +19,7 @@ public class PersonCheckDaoTest {
         pr.setDateOfBirth(LocalDate.of(1995, 3, 18));
         pr.setStreetCode(1);
         pr.setBuilding("10");
-        pr.setExtention("2");
+        pr.setExtension("2");
         pr.setApartment("141");
 
         PersonCheckDao dao = new PersonCheckDao();

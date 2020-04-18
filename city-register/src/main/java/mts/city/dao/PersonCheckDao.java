@@ -48,7 +48,7 @@ public class PersonCheckDao {
 
         String sql = SQL_REQUEST;
 
-        if (request.getExtention() != null) {
+        if (request.getExtension() != null) {
             sql += " and a.extension = ? ";
         } else {
             sql += " and a.extension is null ";
@@ -71,8 +71,8 @@ public class PersonCheckDao {
             ps.setInt(count++, request.getStreetCode());
             ps.setString(count++, request.getBuilding());
 
-            if (request.getExtention() != null) {
-                ps.setString(count++, request.getExtention());
+            if (request.getExtension() != null) {
+                ps.setString(count++, request.getExtension());
             }
             if (request.getApartment() != null) {
                 ps.setString(count, request.getApartment());
