@@ -1,15 +1,20 @@
 package mts.city.web;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import mts.city.domain.PersonResponse;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 
 @Path("/check")
 public class CheckPersonService {
 
     @GET
-    public String checkPerson() {
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public PersonResponse checkPerson(@PathParam("id") int simpleId,
+                                      @QueryParam("name") String simpleName) {
 
-        return "Simple sting";
+        return new PersonResponse();
     }
 
 }
