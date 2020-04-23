@@ -38,7 +38,6 @@ public class PersonCheckDao {
 
     private Connection getConnection() throws SQLException {
         logger.info("Попытка получить коннекшн ");
-//      TODO : Тут оно и валится
         return connectionBuilder.getConnection();
     }
 
