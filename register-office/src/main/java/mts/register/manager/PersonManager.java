@@ -9,12 +9,58 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.List;
 
 public class PersonManager {
 
     public static void main(String[] args) {
 
+//        sessionExample();
+        
+        jpaExmaple();
+
+
+    }
+
+    private static void jpaExmaple() {
+
+        System.out.println("********** JPA **********");
+        System.out.println("======= Factory ===========");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
+
+        System.out.println("======= Entity ===========");
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        System.out.println("======= Person ===========");
+        Person p = new Person();
+        p.setFirstName("Алексей");
+        p.setLastName("Федоров");
+        //Запись данных
+        // Ничего не вернёт, но инициализирует не заполненное поле id
+        em.persist(p);
+        System.out.println(p.getPersonId());
+
+        em.getTransaction().commit();
+        em.close();
+
+        System.out.println("======= LIST ==========");
+        em = emf.createEntityManager();
+        // использует JPAQL, но вроде может и HQL использовать
+        List list = em.createQuery("FROM Person").getResultList();
+        list.forEach(p1 -> System.out.println(p1));
+
+        em.close();
+
+
+    }
+
+    private static void sessionExample() {
+
+        System.out.println("********** Hibernate **********");
         System.out.println("======= Factory ===========");
         SessionFactory sf = buildSessionFactory();
 
@@ -47,9 +93,6 @@ public class PersonManager {
         List<Person> list = session.createQuery("FROM Person", Person.class).list();
         list.forEach(p -> System.out.println(p));
         session.close();
-
-        session.delete;
-
     }
 
 

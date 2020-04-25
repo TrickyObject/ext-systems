@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistance.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -79,22 +78,30 @@
       <option name="project" value="LOCAL" />
       <updated>1587834079105</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Insert and Select via hibernate.&#10;Some minor fixes">
+      <created>1587838676367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587838676367</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hibernate added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate added" />
+    <MESSAGE value="Insert and Select via hibernate.&#10;Some minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Insert and Select via hibernate.&#10;Some minor fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1587837925284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587837925284" />
-    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1587834077567">
+    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1587838675133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587834077567" />
+    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587838675133" />
     <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1587838421454">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -115,9 +122,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587836364278" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587834080953">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587838678227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587834080953" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587838678227" />
+    <state x="1170" y="270" key="extract.method.dialog" timestamp="1587846925397">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1170" y="270" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587846925397" />
   </component>
 </project>
