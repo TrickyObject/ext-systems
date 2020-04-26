@@ -1,13 +1,14 @@
 package mts.register.domain;
 
-
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.List;
 
-@Entity //показывает, что класс является сущностью к сохранению
-@Table(name = "ro_person") // с какой таблицей работаем. Можно без аргументов - будем искать сам
+@Table(name = "ro_person")
+@Entity
 public class Person {
 
-    @Id // поле является идентификатором
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "person_id")
     private Long personId;
@@ -15,15 +16,14 @@ public class Person {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    @Column(name = "patronymic")
+    private String patronymic;
+    @Column(name = "date_birth")
+    private LocalDate dateOfBirth;
+    @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person") // отношение между таблицами
+    private List<Passport> passports;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "personId=" + personId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
+
 
     public Long getPersonId() {
         return personId;
@@ -47,5 +47,29 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public List<Passport> getPassports() {
+        return passports;
+    }
+
+    public void setPassports(List<Passport> passports) {
+        this.passports = passports;
     }
 }

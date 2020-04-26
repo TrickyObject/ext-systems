@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistance.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/business/MarriageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/dao/MarraiageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/BirthCert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/MarriageCert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/Passport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonFemale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonMale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ro.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ro.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,47 +96,55 @@
       <option name="project" value="LOCAL" />
       <updated>1587838676367</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add JPA example">
+      <created>1587847722875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587847722875</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hibernate added" />
     <MESSAGE value="Insert and Select via hibernate.&#10;Some minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Insert and Select via hibernate.&#10;Some minor fixes" />
+    <MESSAGE value="Add JPA example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add JPA example" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1587837925284">
+    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1587908242636">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587837925284" />
-    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1587838675133">
+    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587908242636" />
+    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1587847721732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587838675133" />
-    <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1587838421454">
+    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587847721732" />
+    <state width="914" height="279" key="GridCell.Tab.0.bottom" timestamp="1587848288467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587838421454" />
-    <state width="916" height="279" key="GridCell.Tab.0.center" timestamp="1587838421454">
+    <state width="914" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288467" />
+    <state width="914" height="279" key="GridCell.Tab.0.center" timestamp="1587848288466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587838421454" />
-    <state width="916" height="279" key="GridCell.Tab.0.left" timestamp="1587838421454">
+    <state width="914" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288466" />
+    <state width="914" height="279" key="GridCell.Tab.0.left" timestamp="1587848288466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587838421454" />
-    <state width="916" height="279" key="GridCell.Tab.0.right" timestamp="1587838421454">
+    <state width="914" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288466" />
+    <state width="914" height="279" key="GridCell.Tab.0.right" timestamp="1587848288466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587838421454" />
+    <state width="914" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288466" />
     <state x="922" y="137" key="SettingsEditor" timestamp="1587836364278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587836364278" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587838678227">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587847724357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587838678227" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587847724357" />
     <state x="1170" y="270" key="extract.method.dialog" timestamp="1587846925397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
