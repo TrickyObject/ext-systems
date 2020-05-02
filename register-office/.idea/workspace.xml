@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/business/MarriageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/dao/MarraiageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/BirthCert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/MarriageCert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/Passport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonFemale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonMale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mts/register/dao/PersonDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mts/register/dao/PersonDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/BirthCert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/BirthCert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/MarriageCert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/MarriageCert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/manager/PersonManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonFemale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonFemale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonMale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonMale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ro.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ro.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -44,6 +40,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -51,7 +49,15 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="mts.register.dao" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PersonDaoTest.testFindPerson">
     <configuration name="PersonManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mts.register.manager.PersonManager" />
       <module name="register-office" />
@@ -65,8 +71,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PersonDaoTest.testFindPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="register-office" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mts.register.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mts.register.dao" />
+      <option name="MAIN_CLASS_NAME" value="mts.register.dao.PersonDaoTest" />
+      <option name="METHOD_NAME" value="testFindPerson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PersonDaoTest.testFindPerson" />
         <item itemvalue="Application.PersonManager" />
       </list>
     </recent_temporary>
@@ -103,51 +126,67 @@
       <option name="project" value="LOCAL" />
       <updated>1587847722875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Make domain model via Hibernate.">
+      <created>1587911147545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587911147545</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hibernate added" />
     <MESSAGE value="Insert and Select via hibernate.&#10;Some minor fixes" />
     <MESSAGE value="Add JPA example" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add JPA example" />
+    <MESSAGE value="Make domain model via Hibernate." />
+    <option name="LAST_COMMIT_MESSAGE" value="Make domain model via Hibernate." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1587908242636">
+    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1588406669752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587908242636" />
-    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1587847721732">
+    <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588406669752" />
+    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1587911145244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587847721732" />
-    <state width="914" height="279" key="GridCell.Tab.0.bottom" timestamp="1587848288467">
+    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587911145244" />
+    <state width="1877" height="262" key="GridCell.Tab.0.bottom" timestamp="1588410823137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288467" />
-    <state width="914" height="279" key="GridCell.Tab.0.center" timestamp="1587848288466">
+    <state width="1877" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588410823137" />
+    <state width="1877" height="262" key="GridCell.Tab.0.center" timestamp="1588410823137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288466" />
-    <state width="914" height="279" key="GridCell.Tab.0.left" timestamp="1587848288466">
+    <state width="1877" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588410823137" />
+    <state width="1877" height="262" key="GridCell.Tab.0.left" timestamp="1588410823137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288466" />
-    <state width="914" height="279" key="GridCell.Tab.0.right" timestamp="1587848288466">
+    <state width="1877" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588410823137" />
+    <state width="1877" height="262" key="GridCell.Tab.0.right" timestamp="1588410823137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587848288466" />
+    <state width="1877" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588410823137" />
     <state x="922" y="137" key="SettingsEditor" timestamp="1587836364278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587836364278" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587847724357">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587911149367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587847724357" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587911149367" />
+    <state x="1211" y="342" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587920538849">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1211" y="342" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587920538849" />
     <state x="1170" y="270" key="extract.method.dialog" timestamp="1587846925397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="270" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587846925397" />
+    <state x="1147" y="255" width="585" height="530" key="find.popup" timestamp="1588410354208">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1147" y="255" width="585" height="530" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588410354208" />
   </component>
 </project>

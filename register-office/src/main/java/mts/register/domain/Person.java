@@ -6,6 +6,8 @@ import java.util.List;
 
 @Table(name = "ro_person")
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // стиль представления в бд наследованых таблиц
+@DiscriminatorColumn(name = "sex", discriminatorType = DiscriminatorType.INTEGER)
 public class Person {
 
     @Id
@@ -20,6 +22,9 @@ public class Person {
     private String patronymic;
     @Column(name = "date_birth")
     private LocalDate dateOfBirth;
+    @OneToOne(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY,
+            mappedBy = "person")
+    private BirthCert birthCert;
     @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person") // отношение между таблицами
     private List<Passport> passports;
 
@@ -71,5 +76,13 @@ public class Person {
 
     public void setPassports(List<Passport> passports) {
         this.passports = passports;
+    }
+
+    public BirthCert getBirthCert() {
+        return birthCert;
+    }
+
+    public void setBirthCert(BirthCert birthCert) {
+        this.birthCert = birthCert;
     }
 }

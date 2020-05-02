@@ -1,10 +1,15 @@
 package mts.register.domain;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@DiscriminatorValue("1")
 public class PersonFemale extends Person {
 
+    @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "wife")
     private List<MarriageCert> marriageCerts;
+    @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "mother")
     private List<BirthCert> birthCerts;
 
 
