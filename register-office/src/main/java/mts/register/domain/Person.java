@@ -8,6 +8,16 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // стиль представления в бд наследованых таблиц
 @DiscriminatorColumn(name = "sex", discriminatorType = DiscriminatorType.INTEGER)
+// выгодно в высоконагруженной системе
+// параметры через ":personId"
+// FETCH сразу подтягивает
+@NamedQueries({
+        @NamedQuery(name = "Person.findPersons",
+                query = "SELECT p FROM Person p " +
+                        "LEFT JOIN FETCH p.passports " +
+                        "LEFT JOIN FETCH p.birthCert " +
+                        "WHERE p.personId = :personId")
+})
 public class Person {
 
     @Id
