@@ -13,7 +13,10 @@ public class Starter {
                 new String[]{"springContext.xml"}
         );
 
+//         вариант для загрузки, если ущестует несколько подобных классов
+//         загружаемый класс специфицируется аргументом
         MarriageController controller = context.getBean("controller", MarriageController.class);
+//        MarriageController controller = context.getBean(MarriageController.class);
         controller.findMarriageCert(new MarriageRequest());
 
     }
