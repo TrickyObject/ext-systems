@@ -1,18 +1,26 @@
 package mts.register.business;
 
-import mts.register.dao.MarraiageDao;
+import mts.register.dao.MarriageDao;
+import mts.register.domain.MarriageCert;
 import mts.register.view.MarriageRequest;
 import mts.register.view.MarriageResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MarriageManager {
 
-    private MarraiageDao dao;
+    private static final Logger LOGGER =
+            LoggerFactory.getLogger(MarriageManager.class);
+
+    private MarriageDao marriageDao;
 
     public MarriageResponse findMarriageCert(MarriageRequest request) {
 
-        dao = new MarraiageDao();
+        LOGGER.info("findMarriageCert called..");
 
-        throw new UnsupportedOperationException("Unsup");
+        MarriageCert cert = marriageDao.findMarriageCert(request);
+
+        return new MarriageResponse();
 
     }
 }
