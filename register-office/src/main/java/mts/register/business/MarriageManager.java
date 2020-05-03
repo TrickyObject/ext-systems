@@ -23,4 +23,8 @@ public class MarriageManager {
         return new MarriageResponse();
 
     }
+
+    public void setMarriageDao(MarriageDao marriageDao) {
+        this.marriageDao = marriageDao;
+    }
 }

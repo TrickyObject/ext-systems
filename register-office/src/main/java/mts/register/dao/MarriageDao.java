@@ -1,7 +1,6 @@
 package mts.register.dao;
 
 import mts.register.domain.MarriageCert;
-import mts.register.rest.MarriageController;
 import mts.register.view.MarriageRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,8 +15,14 @@ public class MarriageDao {
     private EntityManager entityManager;
     // сделать запрос к сертификату, который включает все необходимые поля
 
+    private String test;
+
+    public void setTest(String test) {
+        this.test = test;
+    }
+
     public MarriageCert findMarriageCert(MarriageRequest request) {
-        LOGGER.info("findMarriageCert called..");
+        LOGGER.info("findMarriageCert called.. " + test);
 
         // TODO
         return new MarriageCert();
