@@ -8,9 +8,12 @@ import mts.register.view.MarriageResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("marriageService")
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) // количество создаваемых объектов, если 1, то Синглтон
 public class MarriageManager {
 
     private static final Logger LOGGER =

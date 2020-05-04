@@ -14,37 +14,38 @@
     </properties>
 
      <dependencies>
-
+         <!-- PostgreSQL-->
          <dependency>
              <groupId>org.postgresql</groupId>
              <artifactId>postgresql</artifactId>
              <version>42.2.8</version>
          </dependency>
-
+         <!-- Hibernate-->
          <dependency>
              <groupId>org.hibernate</groupId>
              <artifactId>hibernate-core</artifactId>
              <version>5.4.2.Final</version>
          </dependency>
-
+         <!-- API логгера -->
          <dependency>
              <groupId>org.slf4j</groupId>
              <artifactId>slf4j-api</artifactId>
              <version>${slf4j.version}</version>
          </dependency>
+         <!-- логгер непосредственно -->
          <dependency>
              <groupId>org.slf4j</groupId>
              <artifactId>slf4j-simple</artifactId>
              <version>${slf4j.version}</version>
          </dependency>
-
+         <!-- Тесты (хотя вроде есть из коробки)-->
          <dependency>
              <groupId>junit</groupId>
              <artifactId>junit</artifactId>
              <version>4.12</version>
              <scope>test</scope>
          </dependency>
-
+         <!-- Spring минимум -->
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-beans</artifactId>
@@ -53,6 +54,12 @@
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-context</artifactId>
+             <version>${spring.version}</version>
+         </dependency>
+         <!-- Spring ORM -->
+         <dependency>
+             <groupId>org.springframework</groupId>
+             <artifactId>spring-orm</artifactId>
              <version>${spring.version}</version>
          </dependency>
 
