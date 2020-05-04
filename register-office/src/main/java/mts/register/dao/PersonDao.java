@@ -2,10 +2,7 @@ package mts.register.dao;
 
 import mts.register.domain.Person;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 
 public class PersonDao {
@@ -14,15 +11,12 @@ public class PersonDao {
 //        em.merge(); // обновление
 //        em.remove(); // удаление
 
+    // при подключении спринга, заполнение менеджера происходит с помощью аннотации
+    // описаниек в файле контекста
+    // заполнение происходит не в конструкторе
+    @PersistenceContext
     private EntityManager em;
 
-    public PersonDao() {
-
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistence");
-        em = factory.createEntityManager();
-
-
-    }
 
     public List<Person> findPerson() {
         // вариант с параметром

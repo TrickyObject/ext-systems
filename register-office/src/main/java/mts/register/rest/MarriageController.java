@@ -24,8 +24,5 @@ public class MarriageController {
         return marriageManager.findMarriageCert(request);
     }
 
-    public void setMarriageManager(MarriageManager marriageManager) {
-        this.marriageManager = marriageManager;
-    }
 
 }

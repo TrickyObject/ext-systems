@@ -21,22 +21,17 @@ public class MarriageManager {
 
     @Autowired
     private MarriageDao marriageDao;
-
     @Autowired
     private PersonDao personDao;
 
 
     public MarriageResponse findMarriageCert(MarriageRequest request) {
-
         LOGGER.info("findMarriageCert called..");
 
         MarriageCert cert = marriageDao.findMarriageCert(request);
+        personDao.findPerson();
 
         return new MarriageResponse();
 
-    }
-
-    public void setMarriageDao(MarriageDao marriageDao) {
-        this.marriageDao = marriageDao;
     }
 }
