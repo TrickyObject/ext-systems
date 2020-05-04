@@ -26,4 +26,12 @@ public class PersonDao {
         // вариант без параметра
 //        return em.createNamedQuery("Person.findPersons").getResultList();
     }
+
+    public Long addPerson(Person person) {
+
+            em.persist(person);
+            em.flush();
+
+        return person.getPersonId();
+    }
 }

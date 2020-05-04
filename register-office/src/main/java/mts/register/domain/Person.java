@@ -18,7 +18,7 @@ import java.util.List;
                         "LEFT JOIN FETCH p.birthCert " +
                         "WHERE p.personId = :personId")
 })
-public class Person {
+public abstract class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
