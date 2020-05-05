@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/business/MarriageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/business/MarriageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/dao/MarriageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/dao/MarriageDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/dao/PersonDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/springContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springContext.xml" afterDir="false" />
@@ -195,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588609504665</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Добавление транзакционности спринга">
+      <created>1588614385947</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588614385947</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -213,7 +222,8 @@
     <MESSAGE value="Второй вариант загрузки контекстов (через аннотации)&#10;Загрузки переменных (через файл ресурсов и его загрузку)&#10;Автосвязывание классов при загрузке" />
     <MESSAGE value="Замена работы ORM напрямую на работу через Spring" />
     <MESSAGE value="Удалил лишнее, протестировал. Рид-онли работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалил лишнее, протестировал. Рид-онли работает" />
+    <MESSAGE value="Добавление транзакционности спринга" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление транзакционности спринга" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1588499421214">
@@ -224,34 +234,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1153" y="151" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588497933696" />
-    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1588609503134">
+    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1588614384452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588609503134" />
-    <state width="912" height="323" key="GridCell.Tab.0.bottom" timestamp="1588612757738">
+    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588614384452" />
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom" timestamp="1588621789525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588612757738" />
-    <state width="912" height="323" key="GridCell.Tab.0.center" timestamp="1588612757738">
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588621789525" />
+    <state width="1877" height="258" key="GridCell.Tab.0.center" timestamp="1588621789525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="323" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588612757738" />
-    <state width="912" height="323" key="GridCell.Tab.0.left" timestamp="1588612757738">
+    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588621789525" />
+    <state width="1877" height="258" key="GridCell.Tab.0.left" timestamp="1588621789525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="323" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588612757738" />
-    <state width="912" height="323" key="GridCell.Tab.0.right" timestamp="1588612757738">
+    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588621789525" />
+    <state width="1877" height="258" key="GridCell.Tab.0.right" timestamp="1588621789525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="323" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588612757738" />
+    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588621789525" />
     <state x="922" y="137" key="SettingsEditor" timestamp="1587836364278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587836364278" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588609506056">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588614387482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588609506056" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588614387482" />
     <state x="1090" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588611513983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,5 +278,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1147" y="255" width="585" height="530" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588410354208" />
+    <state x="1103" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588680517362">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588680517362" />
   </component>
 </project>

@@ -21,7 +21,6 @@ public class PersonDao {
     public List<Person> findPerson() {
         // вариант с параметром
         Query query = em.createNamedQuery("Person.findPersons");
-        query.setParameter("personId",1L);
         return query.getResultList();
         // вариант без параметра
 //        return em.createNamedQuery("Person.findPersons").getResultList();
