@@ -46,7 +46,17 @@ public class MarriageManager {
 
         MarriageCert mc = getMarriageCertificate();
         marriageDao.saveAndFlush(mc);
-        marriageDao.findAll();
+
+//        marriageDao.findAll();
+
+        List<MarriageCert> list = marriageDao.findByNumber("12345");
+        list.forEach(m -> LOGGER.info("MC: " + m.getMarriageCertId()));
+        LOGGER.info("------------> ");
+        List<MarriageCert> list1 = marriageDao.findByNum("12345");
+        list1.forEach(m -> LOGGER.info("MC: " + m.getMarriageCertId()));
+        LOGGER.info("------------> ");
+        List<MarriageCert> list2 = marriageDao.findSomething("12345");
+        list2.forEach(m -> LOGGER.info("MC: " + m.getMarriageCertId()));
 
         return new MarriageResponse();
 

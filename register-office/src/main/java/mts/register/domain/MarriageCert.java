@@ -1,10 +1,15 @@
 package mts.register.domain;
 
+import org.springframework.data.jpa.repository.Query;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Table(name = "ro_marriage_certificate")
 @Entity
+// В NamedQuery нужно указать имя класса (!)
+@NamedQuery(name = "MarriageCert.findByNum",
+        query = "SELECT mc FROM MarriageCert mc WHERE mc.number = :number")
 public class MarriageCert {
 
     @Id
@@ -26,12 +31,12 @@ public class MarriageCert {
     @Column(name = "end_date")
     private LocalDate endDate;
 
-    public Long getCertId() {
+    public Long getMarriageCertId() {
         return marriageCertId;
     }
 
-    public void setCertId(Long certId) {
-        this.marriageCertId = certId;
+    public void setMarriageCertId(Long marriageCertId) {
+        this.marriageCertId = marriageCertId;
     }
 
     public String getNumber() {
@@ -50,22 +55,6 @@ public class MarriageCert {
         this.issueDate = issueDate;
     }
 
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public LocalDate getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
-
     public PersonMale getHusband() {
         return husband;
     }
@@ -80,5 +69,21 @@ public class MarriageCert {
 
     public void setWife(PersonFemale wife) {
         this.wife = wife;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 }
