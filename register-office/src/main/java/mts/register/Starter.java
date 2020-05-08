@@ -15,9 +15,9 @@ public class Starter {
 
 //         вариант для загрузки, если ущестует несколько подобных классов
 //         загружаемый класс специфицируется аргументом
-        MarriageController controller = context.getBean("controller", MarriageController.class);
+//        MarriageController controller = context.getBean("controller", MarriageController.class);
 //        MarriageController controller = context.getBean(MarriageController.class);
-        controller.findMarriageCert(new MarriageRequest());
+//        controller.findMarriageCert(new MarriageRequest());
 
     }
 }

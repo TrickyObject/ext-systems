@@ -9,7 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 @Service("controller")
+@Path("/mc")
 public class MarriageController {
 
     private static final Logger LOGGER =
@@ -19,9 +25,13 @@ public class MarriageController {
     @Qualifier("marriageService") // квалификатор. Указывает, какой именно объект надо подлкючить
     private MarriageManager marriageManager;
 
-    public MarriageResponse findMarriageCert (MarriageRequest request) {
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public MarriageResponse findMarriageCert () {
+        //MarriageRequest request
         LOGGER.info("findMarriageCert called..");
-        return marriageManager.findMarriageCert(request);
+        return marriageManager.findMarriageCert(null);
+        //request
     }
 
 

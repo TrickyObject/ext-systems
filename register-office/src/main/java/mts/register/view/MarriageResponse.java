@@ -5,23 +5,34 @@ import java.time.LocalDate;
 
 public class MarriageResponse implements Serializable {
 
-    private String husbandSurName;
-    private String husbandGivenName;
-    private String husbandPatronymic;
-    private LocalDate husbandBirthDay;
-    private String husbandPassportSerial;
-    private String husbandPassportNumber;
-    private LocalDate husbandPassportDate;
+    private boolean existing;
 
-    private String wifeSurName;
-    private String wifeGivenName;
-    private String wifePatronymic;
-    private LocalDate wifeBirthDay;
-    private String wifePassportSerial;
-    private String wifePassportNumber;
-    private LocalDate wifePassportDate;
+    public boolean isExisting() {
+        return existing;
+    }
 
-    private String marriageCertNumber;
-    private LocalDate marriageCertDate;
+    public void setExisting(boolean existing) {
+        this.existing = existing;
+    }
+
+    //
+//    private String husbandSurName;
+//    private String husbandGivenName;
+//    private String husbandPatronymic;
+//    private LocalDate husbandBirthDay;
+//    private String husbandPassportSerial;
+//    private String husbandPassportNumber;
+//    private LocalDate husbandPassportDate;
+//
+//    private String wifeSurName;
+//    private String wifeGivenName;
+//    private String wifePatronymic;
+//    private LocalDate wifeBirthDay;
+//    private String wifePassportSerial;
+//    private String wifePassportNumber;
+//    private LocalDate wifePassportDate;
+//
+//    private String marriageCertNumber;
+//    private LocalDate marriageCertDate;
 
 }
