@@ -6,7 +6,8 @@
 
     <groupId>mts</groupId>
     <artifactId>register-office</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>alpha.service</version>
+    <packaging>war</packaging>
 
     <properties>
         <slf4j.version>1.8.0-beta4</slf4j.version>
