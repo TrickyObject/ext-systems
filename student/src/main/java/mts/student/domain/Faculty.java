@@ -15,6 +15,9 @@ public class Faculty {
     private University university;
     @Column(name = "faculty_name")
     private String facultyName;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinColumn(name = "faculty_id")
+    private Faculty faculty;
 
 
     public Long getFacultyId() {
