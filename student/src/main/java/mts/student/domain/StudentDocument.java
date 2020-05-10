@@ -20,10 +20,12 @@ public class StudentDocument {
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn(name = "student_id")
     private Student student;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinColumn(name = "faculty_id")
+    private Faculty faculty;
     @Column(name = "student_form")
     @Enumerated
     private StudentForm studentForm;
-
 
 
     public Long getDocumentId() {
@@ -64,6 +66,14 @@ public class StudentDocument {
 
     public void setStudent(Student student) {
         this.student = student;
+    }
+
+    public Faculty getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(Faculty faculty) {
+        this.faculty = faculty;
     }
 
     public StudentForm getStudentForm() {
