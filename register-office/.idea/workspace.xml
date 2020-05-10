@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/rest/MarriageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/rest/MarriageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mts/register/dao/PersonDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mts/register/dao/PersonDaoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588956856330</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Версия преобразована в спринг-war и задеплоина. Всё отрабатывает успешно. Успех!">
+      <created>1588960407521</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588960407521</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -247,7 +245,8 @@
     <MESSAGE value="Добавление транзакционности спринга" />
     <MESSAGE value="Подключил Spring-Data для работы с бд" />
     <MESSAGE value="Чтение данных с использованием JPA 3мя разными способами.&#10;Ремарка: уменьшение связанности кода не всегда хорошо" />
-    <option name="LAST_COMMIT_MESSAGE" value="Чтение данных с использованием JPA 3мя разными способами.&#10;Ремарка: уменьшение связанности кода не всегда хорошо" />
+    <MESSAGE value="Версия преобразована в спринг-war и задеплоина. Всё отрабатывает успешно. Успех!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Версия преобразована в спринг-war и задеплоина. Всё отрабатывает успешно. Успех!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1588959930063">
@@ -258,34 +257,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1153" y="151" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588497933696" />
-    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1588956854584">
+    <state x="1080" y="107" key="CommitChangelistDialog2" timestamp="1588960405911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588956854584" />
-    <state width="916" height="260" key="GridCell.Tab.0.bottom" timestamp="1588705005770">
+    <state x="1080" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588960405911" />
+    <state width="916" height="257" key="GridCell.Tab.0.bottom" timestamp="1588964847503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588705005770" />
-    <state width="916" height="260" key="GridCell.Tab.0.center" timestamp="1588705005765">
+    <state width="916" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588964847503" />
+    <state width="916" height="257" key="GridCell.Tab.0.center" timestamp="1588964847503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="260" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588705005765" />
-    <state width="916" height="260" key="GridCell.Tab.0.left" timestamp="1588705005765">
+    <state width="916" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588964847503" />
+    <state width="916" height="257" key="GridCell.Tab.0.left" timestamp="1588964847503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="260" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588705005765" />
-    <state width="916" height="260" key="GridCell.Tab.0.right" timestamp="1588705005765">
+    <state width="916" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588964847503" />
+    <state width="916" height="257" key="GridCell.Tab.0.right" timestamp="1588964847503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="260" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588705005765" />
+    <state width="916" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588964847503" />
     <state x="922" y="137" key="SettingsEditor" timestamp="1587836364278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587836364278" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588956860579">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588960527697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588956860579" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588960527697" />
     <state x="1090" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588611513983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
