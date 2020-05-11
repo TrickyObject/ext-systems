@@ -23,6 +23,9 @@ public class StudentDocument {
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn(name = "faculty_id")
     private Faculty faculty;
+//    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+//    @Column(name = "university_id")
+//    private University university;
     @Column(name = "student_form")
     @Enumerated
     private StudentForm studentForm;

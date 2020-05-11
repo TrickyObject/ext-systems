@@ -15,14 +15,14 @@ public class StudentServiceTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(StudentServiceTest.class);
 
 
-
-    @Autowired
-    private StudentService studentService;
-
+//
+//    @Autowired
+//    private StudentService studentService;
+//
     @Test
     public void simpleTest() {
 
-        studentService.simpleCall();
+//        studentService.simpleCall();
 
         LOGGER.info("StudentServiceTest simpleTest..");
     }

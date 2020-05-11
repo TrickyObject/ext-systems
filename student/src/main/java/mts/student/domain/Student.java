@@ -20,8 +20,8 @@ public class Student {
     private String middleName;
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
-    @Column(name = "passport_seria")
-    private String passportSeria;
+    @Column(name = "passport_serial")
+    private String passportSerial;
     @Column(name = "passport_number")
     private String passportNumber;
     @Column(name = "passport_date")
@@ -71,12 +71,12 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPassportSeria() {
-        return passportSeria;
+    public String getPassportSerial() {
+        return passportSerial;
     }
 
-    public void setPassportSeria(String passportSeria) {
-        this.passportSeria = passportSeria;
+    public void setPassportSerial(String passportSerial) {
+        this.passportSerial = passportSerial;
     }
 
     public String getPassportNumber() {
