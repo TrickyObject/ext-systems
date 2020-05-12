@@ -5,7 +5,6 @@ import mts.student.view.StudentRequest;
 import mts.student.view.StudentResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

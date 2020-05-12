@@ -12,7 +12,6 @@
         http://www.springframework.org/schema/data/jpa
         http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-
     <!-- где искать объекты -->
     <context:component-scan base-package="mts.student"/>
     <!-- Управление аннотациями у ТМ -->
@@ -21,8 +20,6 @@
     <jpa:repositories base-package="mts.student"
                       entity-manager-factory-ref="emf"
                       transaction-manager-ref="txManager"/>
-
-
     <!-- параметры коннекта -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"/>
@@ -30,7 +27,6 @@
         <property name="username" value="postgres"/>
         <property name="password" value="root"/>
     </bean>
-
     <!-- Реализация энтити-мэнеджера -->
     <bean name="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <!-- Дата соурс -->
