@@ -1,5 +1,8 @@
 package mts.student.service;
 
+import mts.student.view.StudentRequest;
+import mts.student.view.StudentResponse;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -8,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @RunWith(SpringRunner.class) // отвечает за запуск тестов через спринг
 @ContextConfiguration(locations = {"classpath:springContext.xml"})
 public class StudentServiceTest {
@@ -15,16 +21,27 @@ public class StudentServiceTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(StudentServiceTest.class);
 
 
-//
-//    @Autowired
-//    private StudentService studentService;
-//
+
+    @Autowired
+    private StudentService studentController;
+
     @Test
-    public void simpleTest() {
-
-//        studentService.simpleCall();
-
+    public void studentInfo() {
         LOGGER.info("StudentServiceTest simpleTest..");
+
+        StudentRequest req = new StudentRequest();
+        req.setLastName("Last");
+        req.setFirstName("First");
+        req.setMiddleName("Middle");
+        req.setDateOfBirth(LocalDate.of(2000,4,12));
+        req.setPassportSerial("1111");
+        req.setPassportNumber("222222");
+        req.setPassportDate(LocalDate.of(2016,4,30));
+
+        List<StudentResponse> studentInfo = studentController.getStudentInfo(req);
+        Assert.assertTrue(studentInfo.size() > 0);
+
+
     }
 
 }
