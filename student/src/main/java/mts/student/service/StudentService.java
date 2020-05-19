@@ -27,7 +27,7 @@ public class StudentService {
     public List<StudentResponse> getStudentInfo(StudentRequest request) {
 
         List<Student> student = studentRepository.findStudent(request.getLastName(),
-                request.getLastName(),
+                request.getFirstName(),
                 request.getMiddleName(),
                 request.getDateOfBirth(),
                 request.getPassportSerial(),

@@ -1,5 +1,6 @@
 package mts.student.service;
 
+import mts.student.rest.StudentController;
 import mts.student.view.StudentRequest;
 import mts.student.view.StudentResponse;
 import org.junit.Assert;
@@ -10,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class StudentServiceTest {
 
 
     @Autowired
-    private StudentService studentController;
+    private StudentController studentController;
 
     @Test
     public void studentInfo() {
@@ -39,8 +39,8 @@ public class StudentServiceTest {
         req.setPassportDate(LocalDate.of(2016,4,30));
 
         List<StudentResponse> studentInfo = studentController.getStudentInfo(req);
-        Assert.assertTrue(studentInfo.size() > 0);
 
+        Assert.assertTrue(studentInfo.size() > 0);
 
     }
 
