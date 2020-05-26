@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/dao/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/rest/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/view/LocalDateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/view/StudentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/view/StudentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/domain/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/domain/StudentDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/domain/StudentDocument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../student/src/test/java/mts/student/service/StudentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/test/java/mts/student/service/StudentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/dao/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/main/java/mts/student/dao/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/dao/UniversityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/service/UniversityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/main/java/mts/student/servlet/UniversityListServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/main/webapp/universityList.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
