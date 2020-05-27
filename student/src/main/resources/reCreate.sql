@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS sr_student;
 
 CREATE TABLE sr_student
 (
-    student_id integer not null,
+    student_id SERIAL,
     date_of_birth date not null,
 	first_name varchar(100) not null,
 	last_name varchar(100) not null,
@@ -18,14 +18,14 @@ CREATE TABLE sr_student
 
 CREATE TABLE sr_university
 (
-    university_id integer not null,
+    university_id SERIAL,
     university_name varchar(300) not null,
     PRIMARY KEY (university_id)
 );
 
 CREATE TABLE sr_faculty
 (
-    faculty_id integer not null,
+    faculty_id SERIAL,
     faculty_name varchar(300),
 	university_id integer,
     PRIMARY KEY (faculty_id),
@@ -34,7 +34,7 @@ CREATE TABLE sr_faculty
 
 CREATE TABLE sr_student_document
 (
-    document_id integer not null,
+    document_id SERIAL,
     document_date date not null,
 	document_number varchar(100) not null,
 	expired_date date not null,
