@@ -1,4 +1,4 @@
-package mts.city.dao;
+package mts.city.dao.old;
 
 import mts.city.domain.PersonRequest;
 import mts.city.domain.PersonResponse;

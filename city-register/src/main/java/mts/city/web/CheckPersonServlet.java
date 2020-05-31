@@ -1,7 +1,7 @@
 package mts.city.web;
 
-import mts.city.dao.PersonCheckDao;
-import mts.city.dao.PoolConnectionBuilder;
+import mts.city.dao.old.PersonCheckDao;
+import mts.city.dao.old.PoolConnectionBuilder;
 import mts.city.domain.PersonRequest;
 import mts.city.domain.PersonResponse;
 import mts.city.exception.PersonCheckException;

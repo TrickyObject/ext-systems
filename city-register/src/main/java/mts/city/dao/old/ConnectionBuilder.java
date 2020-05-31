@@ -1,4 +1,4 @@
-package mts.city.dao;
+package mts.city.dao.old;
 
 import java.sql.Connection;
 import java.sql.SQLException;

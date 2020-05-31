@@ -1,5 +1,6 @@
 package mts.city.dao;
 
+import mts.city.dao.old.PersonCheckDao;
 import mts.city.domain.PersonRequest;
 import mts.city.domain.PersonResponse;
 import mts.city.exception.PersonCheckException;
