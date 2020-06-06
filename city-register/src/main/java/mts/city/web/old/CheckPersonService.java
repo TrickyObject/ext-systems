@@ -1,4 +1,4 @@
-package mts.city.web;
+package mts.city.web.old;
 
 import mts.city.dao.old.PersonCheckDao;
 import mts.city.dao.old.PoolConnectionBuilder;
@@ -14,10 +14,10 @@ import javax.inject.Singleton;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Path("/check")
-@Singleton
+//@Path("/check")
+//@Singleton
 public class CheckPersonService {
-
+/*
     private static final Logger logger = LoggerFactory.getLogger(CheckPersonService.class);
     private PersonCheckDao dao;
 
@@ -42,7 +42,7 @@ public class CheckPersonService {
         logger.info(request.toString());
         return dao.checkPerson(request);
     }
-
+*/
 }
 
 

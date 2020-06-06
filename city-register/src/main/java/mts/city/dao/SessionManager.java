@@ -12,17 +12,20 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class SessionManager {
 
+    private static SessionFactory sf;
+
     public static void main(String[] args) {
 
-        SessionFactory sf = buildSessionFactory();
-
-        Session session = sf.openSession();
-        session.getTransaction();
-
+        //сделать синглтон
+        sf = buildSessionFactory();
+//        Session session = sf.openSession();
+//        session.getTransaction();
 
 
     }
 
+    // сделать сешн фэктори или через хикари
+    // сделать метод получения сессии
     private static SessionFactory buildSessionFactory() {
 
         try {
@@ -38,6 +41,12 @@ public class SessionManager {
             System.out.println("Провал создания фабрики сессий.. " + ex);
             throw new ExceptionInInitializerError(ex);
         }
+    }
+
+    private static Session getSession () {
+
+        return sf.openSession();
+
     }
 
 }

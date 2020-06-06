@@ -6,7 +6,7 @@
 
     <groupId>mts</groupId>
     <artifactId>city-register</artifactId>
-    <version>1.0</version>
+    <version>jh</version>
     <packaging>war</packaging>
 
     <properties>
@@ -31,7 +31,8 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <!-- Если нет веб.хмл - false -->
+                    <failOnMissingWebXml>true</failOnMissingWebXml>
                     <outputDirectory>E:\Dev\Tools\apache-tomcat-9.0.34\webapps</outputDirectory>
                 </configuration>
             </plugin>

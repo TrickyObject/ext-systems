@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../city-register/src/main/java/mts/city/domain/entity/Adress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../city-register/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../city-register/src/main/resources/инструкция" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../city-register/.idea/city-register.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../city-register/.idea/city-register.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../city-register/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../city-register/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../city-register/src/main/java/mts/city/dao/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../city-register/src/main/java/mts/city/dao/SessionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
