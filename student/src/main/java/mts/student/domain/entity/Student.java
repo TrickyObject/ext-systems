@@ -1,4 +1,4 @@
-package mts.student.domain;
+package mts.student.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -27,9 +27,23 @@ public class Student {
     @Column(name = "passport_date")
     private LocalDate passportDate;
     @OneToMany(cascade = CascadeType.REFRESH,
-            fetch = FetchType.LAZY, mappedBy = "student")
+            fetch = FetchType.LAZY, mappedBy = "mts/student")
     private List<StudentDocument> documents;
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", passportSerial='" + passportSerial + '\'' +
+                ", passportNumber='" + passportNumber + '\'' +
+                ", passportDate=" + passportDate +
+                ", documents=" + documents +
+                '}';
+    }
 
     public Long getStudentId() {
         return studentId;

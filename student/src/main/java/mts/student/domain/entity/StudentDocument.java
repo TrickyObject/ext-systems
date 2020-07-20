@@ -1,4 +1,4 @@
-package mts.student.domain;
+package mts.student.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -23,13 +23,26 @@ public class StudentDocument {
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn(name = "faculty_id")
     private Faculty faculty;
-//    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
-//    @Column(name = "university_id")
-//    private University university;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinColumn(name = "university_id")
+    private University university;
     @Column(name = "student_form")
     @Enumerated
     private StudentForm studentForm;
 
+    @Override
+    public String toString() {
+        return "StudentDocument{" +
+                "documentId=" + documentId +
+                ", documentNumber='" + documentNumber + '\'' +
+                ", documentDate=" + documentDate +
+                ", expiredDate=" + expiredDate +
+                ", mts.student=" + student +
+                ", faculty=" + faculty +
+                ", university=" + university +
+                ", studentForm=" + studentForm +
+                '}';
+    }
 
     public Long getDocumentId() {
         return documentId;
@@ -77,6 +90,14 @@ public class StudentDocument {
 
     public void setFaculty(Faculty faculty) {
         this.faculty = faculty;
+    }
+
+    public University getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(University university) {
+        this.university = university;
     }
 
     public StudentForm getStudentForm() {

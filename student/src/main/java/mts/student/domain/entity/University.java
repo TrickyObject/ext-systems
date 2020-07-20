@@ -1,4 +1,5 @@
-package mts.student.domain;
+package mts.student.domain.entity;
+
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,6 +18,14 @@ public class University {
             fetch = FetchType.LAZY, mappedBy = "university")
     private List<Faculty> faculties;
 
+    @Override
+    public String toString() {
+        return "University{" +
+                "universityId=" + universityId +
+                ", universityName='" + universityName + '\'' +
+                ", faculties=" + faculties +
+                '}';
+    }
 
     public Long getUniversityId() {
         return universityId;

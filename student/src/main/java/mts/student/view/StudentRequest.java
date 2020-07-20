@@ -1,5 +1,8 @@
 package mts.student.view;
 
+
+import mts.student.domain.LocalDateAdapter;
+
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
@@ -14,7 +17,28 @@ public class StudentRequest {
     private String passportSerial;
     @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate passportDate;
+    private String documentNumber;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
+    private LocalDate documentDate;
+    private String university;
+    private String faculty;
 
+    @Override
+    public String toString() {
+        return "StudentRequest{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", passportNumber='" + passportNumber + '\'' +
+                ", passportSerial='" + passportSerial + '\'' +
+                ", passportDate=" + passportDate +
+                ", documentNumber='" + documentNumber + '\'' +
+                ", documentDate=" + documentDate +
+                ", university='" + university + '\'' +
+                ", faculty='" + faculty + '\'' +
+                '}';
+    }
 
     public String getFirstName() {
         return firstName;
@@ -70,5 +94,37 @@ public class StudentRequest {
 
     public void setPassportDate(LocalDate passportDate) {
         this.passportDate = passportDate;
+    }
+
+    public String getDocumentNumber() {
+        return documentNumber;
+    }
+
+    public void setDocumentNumber(String documentNumber) {
+        this.documentNumber = documentNumber;
+    }
+
+    public LocalDate getDocumentDate() {
+        return documentDate;
+    }
+
+    public void setDocumentDate(LocalDate documentDate) {
+        this.documentDate = documentDate;
+    }
+
+    public String getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
     }
 }

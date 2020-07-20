@@ -1,4 +1,4 @@
-package mts.student.domain;
+package mts.student.domain.entity;
 
 import javax.persistence.*;
 
@@ -16,7 +16,14 @@ public class Faculty {
     @Column(name = "faculty_name")
     private String facultyName;
 
-
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "facultyId=" + facultyId +
+                ", university=" + university +
+                ", facultyName='" + facultyName + '\'' +
+                '}';
+    }
 
     public Long getFacultyId() {
         return facultyId;

@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="Переработка. Теперь используется:&#10;- JUnit&#10;- Maven&#10;- slf4j&#10;- Tomcat&#10;- Hibernate&#10;На вход принимается JSON.&#10;Возвращает тоже JSON.&#10;Работает с POST, а не GET&#10;Спринг убрал. Убрал другие варианты инициализации подключения к бд.&#10;TODO:&#10;СДелать подключение к БД при инициализации сервлета в томкэте на стороне томкжта, а не из кода сервлета. Сервлет будет использовать пул коннетков томкэта, а не порождённый. Повысит надёжность, проще масштабировать и наверное так красивее.">
-      <change afterPath="$PROJECT_DIR$/../city-register/src/main/resources/TODOList" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/business/RegistryOfficeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/dao/MarriageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/LocalDateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/view/MarriageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/view/ParentsRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/view/ParentsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/web/CheckMarriageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/simple.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mts/marriage/dao/MarriageDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ro.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../city-register/src/main/java/mts/city/web/CheckPersonServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../city-register/src/main/java/mts/city/web/CheckPersonServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../city-register/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../city-register/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/Starter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/business/MarriageManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/config/MarriageConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/dao/MarriageDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/dao/PersonDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/BirthCert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/entity/BirthCert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/MarriageCert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/entity/MarriageCert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/entity/Passport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonFemale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/entity/PersonFemale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/domain/PersonMale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/domain/entity/PersonMale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/rest/MarriageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mts/marriage/view/MarriageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mts/register/view/MarriageResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/register.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ro.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ro.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springContextDEFAULT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mts/register/dao/PersonDaoTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="b4104d40-99b0-435b-a616-57589d149b9b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -278,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589128295043</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Переработка. Теперь используется:&#10;- JUnit&#10;- Maven&#10;- slf4j&#10;- Tomcat&#10;- Hibernate&#10;На вход принимается JSON.&#10;Возвращает тоже JSON.&#10;Работает с POST, а не GET&#10;Спринг убрал. Убрал другие варианты инициализации подключения к бд.&#10;TODO:&#10;СДелать подключение к БД при инициализации сервлета в томкэте на стороне томкжта, а не из кода сервлета. Сервлет будет использовать пул коннетков томкэта, а не порождённый. Повысит надёжность, проще масштабировать и наверное так красивее.">
+      <created>1595274090858</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1595274090858</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -313,34 +283,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1153" y="151" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588497933696" />
-    <state x="1044" y="107" key="CommitChangelistDialog2" timestamp="1595274042823">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595274088148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1044" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595274042823" />
-    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1595274042993">
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595274088148" />
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1595275053609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595274042993" />
-    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1595274042993">
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595275053609" />
+    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1595275053609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595274042993" />
-    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1595274042993">
+    <state width="1877" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595275053609" />
+    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1595275053609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595274042993" />
-    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1595274042993">
+    <state width="1877" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595275053609" />
+    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1595275053609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595274042993" />
+    <state width="1877" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595275053609" />
     <state x="922" y="137" key="SettingsEditor" timestamp="1587836364278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587836364278" />
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589128296910">
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595274096257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589128296910" />
+    <state x="1032" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595274096257" />
     <state x="1090" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588611513983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

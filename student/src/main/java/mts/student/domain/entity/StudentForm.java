@@ -1,4 +1,4 @@
-package mts.student.domain;
+package mts.student.domain.entity;
 
 public enum StudentForm {
 
