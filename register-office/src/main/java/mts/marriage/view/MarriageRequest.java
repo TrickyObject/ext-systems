@@ -1,4 +1,4 @@
-package mts.register.view;
+package mts.marriage.view;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -24,6 +24,27 @@ public class MarriageRequest implements Serializable {
     private String marriageCertNumber;
     private LocalDate marriageCertDate;
 
+    @Override
+    public String toString() {
+        return "MarriageRequest{" +
+                "husbandSurName='" + husbandSurName + '\'' +
+                ", husbandGivenName='" + husbandGivenName + '\'' +
+                ", husbandPatronymic='" + husbandPatronymic + '\'' +
+                ", husbandBirthDay=" + husbandBirthDay +
+                ", husbandPassportSerial='" + husbandPassportSerial + '\'' +
+                ", husbandPassportNumber='" + husbandPassportNumber + '\'' +
+                ", husbandPassportDate=" + husbandPassportDate +
+                ", wifeSurName='" + wifeSurName + '\'' +
+                ", wifeGivenName='" + wifeGivenName + '\'' +
+                ", wifePatronymic='" + wifePatronymic + '\'' +
+                ", wifeBirthDay=" + wifeBirthDay +
+                ", wifePassportSerial='" + wifePassportSerial + '\'' +
+                ", wifePassportNumber='" + wifePassportNumber + '\'' +
+                ", wifePassportDate=" + wifePassportDate +
+                ", marriageCertNumber='" + marriageCertNumber + '\'' +
+                ", marriageCertDate=" + marriageCertDate +
+                '}';
+    }
 
     public String getHusbandSurName() {
         return husbandSurName;

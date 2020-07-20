@@ -1,7 +1,8 @@
-package mts.register.domain;
+package mts.marriage.domain.entity;
 
 import javax.persistence.*;
 import java.util.List;
+
 @Entity
 @DiscriminatorValue("2")
 public class PersonMale extends Person {

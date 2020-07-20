@@ -1,6 +1,4 @@
-package mts.register.domain;
-
-import org.springframework.data.jpa.repository.Query;
+package mts.marriage.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;

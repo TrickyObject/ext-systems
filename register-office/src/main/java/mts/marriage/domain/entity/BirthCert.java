@@ -1,4 +1,4 @@
-package mts.register.domain;
+package mts.marriage.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -24,7 +24,6 @@ public class BirthCert {
     @ManyToOne(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinColumn(name = "mother_id")
     private PersonFemale mother;
-
 
     public Long getBirthCertId() {
         return birthCertId;

@@ -1,8 +1,9 @@
-package mts.register.domain;
+package mts.marriage.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
+// cltkfnm dbkblfwb. gfcgjhnf
 @Table(name = "ro_passport")
 @Entity
 public class Passport {
@@ -23,6 +24,13 @@ public class Passport {
     @Column(name = "issue_department")
     private String issueDepartment;
 
+    public Long getPassportId() {
+        return passportId;
+    }
+
+    public void setPassportId(Long passportId) {
+        this.passportId = passportId;
+    }
 
     public Person getPerson() {
         return person;
@@ -30,14 +38,6 @@ public class Passport {
 
     public void setPerson(Person person) {
         this.person = person;
-    }
-
-    public Long getPassportId() {
-        return passportId;
-    }
-
-    public void setPassportId(Long passportId) {
-        this.passportId = passportId;
     }
 
     public String getNumber() {

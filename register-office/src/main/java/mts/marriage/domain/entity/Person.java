@@ -1,4 +1,4 @@
-package mts.register.domain;
+package mts.marriage.domain.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -36,7 +36,6 @@ public abstract class Person {
     private BirthCert birthCert;
     @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person") // отношение между таблицами
     private List<Passport> passports;
-
 
 
     public Long getPersonId() {
@@ -79,19 +78,19 @@ public abstract class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public List<Passport> getPassports() {
-        return passports;
-    }
-
-    public void setPassports(List<Passport> passports) {
-        this.passports = passports;
-    }
-
     public BirthCert getBirthCert() {
         return birthCert;
     }
 
     public void setBirthCert(BirthCert birthCert) {
         this.birthCert = birthCert;
+    }
+
+    public List<Passport> getPassports() {
+        return passports;
+    }
+
+    public void setPassports(List<Passport> passports) {
+        this.passports = passports;
     }
 }

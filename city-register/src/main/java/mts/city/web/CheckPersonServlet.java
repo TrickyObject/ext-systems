@@ -1,6 +1,9 @@
 package mts.city.web;
 
+import mts.city.dao.old.PersonCheckDao;
 import mts.city.domain.PersonRequest;
+import mts.city.domain.PersonResponse;
+import mts.city.exception.PersonCheckException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +24,7 @@ public class CheckPersonServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
+
         req.setCharacterEncoding("UTF-8");
 
         PersonRequest pr = new PersonRequest();
@@ -38,9 +42,15 @@ public class CheckPersonServlet extends HttpServlet {
         pr.setApartment(req.getParameter("apartment"));
 
         //переделать checkPerson на новый лад через хибер
-        /*
+
         try {
+
+            PersonCheckDao dao = new PersonCheckDao();
             PersonResponse ps = dao.checkPerson(pr);
+
+
+
+
             if (ps.isRegistered()) {
                 resp.getWriter().write("Registered");
             } else {
@@ -49,7 +59,7 @@ public class CheckPersonServlet extends HttpServlet {
         } catch (PersonCheckException e) {
             e.printStackTrace();
         }
-*/
+
 
 
 

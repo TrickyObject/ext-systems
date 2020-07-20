@@ -56,14 +56,14 @@ CREATE TABLE ro_marriage_certificate (
 )
 ;
 
-INSERT INTO ro_person(sex, last_name, first_name, patronymic, date_birth)
-VALUES (1, 'Васильева', 'Елена', 'Сергеевна', '1998-03-24');
+INSERT INTO ro_person(sex,first_name, last_name, patronymic, date_birth)
+VALUES (1, 'Elena', 'Vasileva', 'Sergeevna', '1998-03-24');
 
-INSERT INTO ro_person(sex, last_name, first_name, patronymic, date_birth)
-VALUES (2, 'Васильев', 'Олег', 'Петрович', '1998-10-16');
+INSERT INTO ro_person(sex,first_name, last_name, patronymic, date_birth)
+VALUES (2, 'Oleg', 'Vasilev', 'Petrovich', '1998-10-16');
 
-INSERT INTO ro_person(sex, last_name, first_name, patronymic, date_birth)
-VALUES (2, 'Васильев', 'Никольный', 'Олегович', '2018-10-21');
+INSERT INTO ro_person(sex,first_name, last_name, patronymic, date_birth)
+VALUES (2, 'Nikolay', 'Vasilev', 'Olegovich', '2018-10-21');
 
 INSERT INTO ro_passport(person_id, serial, number, date_issue, issue_department)
 VALUES ('1', '1000', '123456', '2018-04-10', 'Dep-1');

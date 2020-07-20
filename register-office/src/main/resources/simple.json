@@ -1,0 +1,25 @@
+{
+  "husbandGivenName": "Oleg",
+  "husbandSurName": "Vasilev",
+  "husbandPatronymic": "Petrovich",
+  "husbandBirthDay": "1998-10-16",
+  "husbandPassportSerial": "2000",
+  "husbandPassportNumber": "123456",
+  "husbandPassportDate": "2018-04-10",
+
+  "wifeSurName": "Vasileva",
+  "wifeGivenName": "Elena",
+  "wifePatronymic": "Sergeevna",
+  "wifeBirthDay": "1998-03-24",
+  "wifePassportSerial": "1000",
+  "wifePassportNumber": "123456",
+  "wifePassportDate": "2018-04-10",
+
+  "marriageCertNumber": "1",
+  "marriageCertDate": "2018-04-10"
+}
+
+{
+  "marriageCertNumber": "12345",
+  "marriageCertDate": "2020-05-05"
+}
